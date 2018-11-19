@@ -135,7 +135,7 @@ html {
 .cPage .tab-content .proitems .content_r .col_process .process > a {
   width: 64px;
   height: 15px;
-  line-height: 6px;
+  line-height: 20px;
   display: inline-block;
   border-radius: 3px;
   background-color: red;
@@ -174,5 +174,46 @@ html {
   text-align: center;
   margin-top: 15px;
   margin-left: 16px;
+}
+
+.mmm_bottom {
+  background-color: #eee;
+  width: 100%;
+  text-align: center;
+}
+
+.mmm_bottom .mmm_bop {
+  width: 100%;
+  height: 40px;
+}
+
+.mmm_bottom .mmm_bop li {
+  list-style: none;
+  border: 1px solid #aaa;
+  font-size: 18px;
+  padding: 7px 0;
+}
+
+.mmm_bottom .mmm_bop li > a {
+  color: #aaa;
+}
+
+.mmm_bottom .mmm_bop2 {
+  color: #a7a7a7;
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.mmm_bottom .mmm_bop2 span:nth-of-type(1) {
+  color: red;
+}
+
+.mmm_bottom .mmm_bop2 span:nth-of-type(2) {
+  color: #212121;
+}
+
+.mmm_bottom .mmm_bop2 span:nth-of-type(3) {
+  color: #aaa;
 }
 /*# sourceMappingURL=chearPage.css.map */
