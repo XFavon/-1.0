@@ -1,0 +1,176 @@
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+}
+
+//头部样式
+.chearPage_header {
+    height: 40px;
+    width: 100%;
+    background-color: #f4483e;
+    position: relative;
+    display: flex;
+
+    .header_loca {
+        position: absolute;
+        width: 16px;
+        height: 40px;
+        top: 0px;
+        left: 4px;
+        color: #fff;
+        background: url('../images/icon_bar.png') no-repeat;
+        background-position: -202px -22px;
+
+
+    }
+
+    .header_font {
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 44px;
+    }
+
+    .header_unload {
+        background: url('../images/header_app.png') no-repeat;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-size: 84%;
+        margin-top: 3px;
+    }
+
+
+}
+
+//tab栏样式
+.cPage{
+    .tabs-parent {
+        width: 100%;
+        overflow: hidden;
+        //tab栏样式
+        .nav-tabs {
+            // margin-bottom: 10px;
+            >li {
+                a {
+                    font-size: 16px;
+                    color: #333333;
+                    border: none;
+                }
+    
+                &.active {
+                    a,
+                    a:hover,
+                    a:focus {
+                        background-color: transparent;
+                        border: none;
+                        background-color: rgba($color: #666, $alpha: 0.1);
+                    }
+                }
+            }
+        }
+    }
+//产品栏
+    .tab-content {
+            width: 100%;
+            padding-top: 20px;
+            .proitems{
+                display: flex;
+                border-bottom: 10px solid #f7f7f7;   
+                .content_l{
+                    flex: 1;
+                    width: 100%;
+                    margin: 0;
+                    >img{
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+                .content_r{
+                    width: 100%;
+                    margin: 0;
+                    //字体详细
+                    .col_font{
+                        .b{
+                            font-weight: bold;
+                            font-size: 18px;
+                        }
+                    }
+                    .chear_news{
+                        margin: 16px 0;
+                        i{
+                            font-size: 16px;
+                            color: #ff0000;
+                        }
+                        em{
+                            font-size:  18px;
+                            color: #ff0000;
+                        }
+                        del{
+                            color: #666;
+                        }
+                    }
+                    //进度条
+                    .col_process{
+                        margin: 12px 0;
+                        .process{
+                            width: 95px;
+                            height: 17px;
+                            display: inline-block;
+                            border-radius: 3px;
+                            box-sizing: border-box;
+                            background-color: rgba($color: #ec0f0f, $alpha: 0.2);
+                            border:1px solid #ff0000;
+                            >a{
+                                width: 64px;
+                                height: 15px;
+                                line-height: 6px;
+                                display: inline-block;
+                                border-radius: 3px;
+                                background-color: red;
+                                color: #fff;
+                                text-align: center;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                
+                    //优惠券
+                    .quan{
+                        display: inline-block;
+                        width: 140px;
+                        height: 25px;
+                        border: 1px dashed #ff0000;
+                        >a{
+                            color: #ff0000;
+                            padding-left: 5%;
+                        }
+                    }
+                    .col_bottom{
+                        margin: 5px 0;
+                        .xiadan{
+                            height: 30px;
+                            width: 86px;
+                            display: inline-block;
+                            background-color: #ff5e5d;
+                            margin-left: 60px;
+                            >a{
+                                line-height: 30px;
+                                color: #fff;
+                                text-align: center;
+                                margin-top: 15px;
+                                margin-left: 16px;
+                            }
+                    }
+                    
+                    }
+        
+        
+                }
+            }
+    
+    }
+}

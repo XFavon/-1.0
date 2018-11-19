@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--文档编码-->
+    <meta charset="utf-8">
+    <!--为了让IE以最新的标准和模式进行当前页面的渲染：为了让 IE 浏览器运行最新的渲染模式下-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--移动端的适配-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/chearPage.css">
+    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+    <title>慢慢买</title>
+
+    <!-- Bootstrap  引入当前bootstrap框架核心的样式文件 -->
+    <link href="./lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+   
+</head>
+<body>
+    <!-- 顶部 -->
+    <div class="chearPage_header">
+        <a href="javascript:;" class="header_loca"></a>
+        <span class="header_font">白菜价-淘宝内部券</span>
+        <a href="javascript:;" class="header_unload"></a> 
+    </div>
+    <!-- TAb滑动栏 -->
+    <div class="cPage">
+        <div class="tabs-parent">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <!-- <li role="presentation" class="active"><a href="#p1" aria-controls="home" role="tab" data-toggle="tab" id="">全部</a></li> -->
+            </ul>
+        </div>
+            <div class="tab-content">
+                <!-- <div role="tabpanel" class="tab-pane active proitems" id="1">
+                                <div class="col-xs-4 content_l" ><img src="./images/ic_pp.png" alt=""></div>
+                                <div class="col-xs-8 content_r">
+                                    <span>根据标题id获取该标题对应的商品列表然后渲染到页面</span><br>
+
+                                   <div class="chear_news"><i class="font-red">券后</i><sub class="font-red">￥</sub><em class="font-red">16</em> <del>￥19</del></div> 
+
+                                   <div><span class="process"><a href="javascrip:;">75%</a></span> <span class="font-red">已领75117张</span></div> 
+
+                                  <div class="col_bottom"><span class="quan"><a href="javascript:;" class="font-red">点此领10元优惠券</a></span>  <span class="xiadan"><a href="javescript:;">下单链接</a></span></div>  
+                                </div>
+               </div>
+                <div role="tabpanel" class="tab-pane proitems" id="2">
+                                <div class="col-xs-4 content_l" ><img src="./images/ic_pp.png" alt=""></div>
+                                <div class="col-xs-8 content_r">
+                                    <span>根据标题id获取该标题对应的商品列表然后渲染到页面</span><br>
+
+                                   <div class="chear_news"><i class="font-red">券后</i><sub class="font-red">￥</sub><em class="font-red">16</em> <del>￥19</del></div> 
+
+                                   <div><span class="process"><a href="javascrip:;">75%</a></span> <span class="font-red">已领75117张</span></div> 
+
+                                  <div class="col_bottom"><span class="quan"><a href="javascript:;" class="font-red">点此领10元优惠券</a></span>  <span class="xiadan"><a href="javescript:;">下单链接</a></span></div>  
+
+                     </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="2"></div>
+
+                <div role="tabpanel" class="tab-pane proitems" id="3">3
+                        <div class="col-xs-4 content_l" ><img src="./images/ic_pp.png" alt=""></div>
+                        <div class="col-xs-8 content_r">
+                            <span>根据标题id获取该标题对应的商品列表然后渲染到页面</span><br>
+
+                           <div class="chear_news"><i class="font-red">券后</i><sub class="font-red">￥</sub><em class="font-red">16</em> <del>￥19</del></div> 
+
+                           <div><span class="process"><a href="javascrip:;">75%</a></span> <span class="font-red">已领75117张</span></div> 
+
+                          <div class="col_bottom"><span class="quan"><a href="javascript:;" class="font-red">点此领10元优惠券</a></span>  <span class="xiadan"><a href="javescript:;">下单链接</a></span></div>  
+
+             </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="4">4</div> -->
+            </div>
+    </div>
+    
+
+
+
+
+<!-- 模板专用区 -->
+<!-- tab栏模板 -->
+<script type="text/template" id="tabTem">
+    {{each result as value index}}
+    <li role="presentation" class="{{index == 0 ? 'active':''}}" titleId="{{value.titleId}}"><a href="#{{value.titleId}}" aria-controls="home" role="tab" data-toggle="tab"  id="{{value._id}}">{{value.title}}</a></li>
+    {{/each}}
+</script>
+
+<!-- tab配合栏 -->
+<script type="text/template" id="productTem">
+    {{each result as value index}}
+    <div role="tabpanel" class="tab-pane active proitems" id="{{#value._id}}" titleId="{{#value.productId}}">
+            <div class="col-xs-4 content_l" >{{#value.productImg}}</div>
+            <div class="col-xs-8 content_r">
+            <span class="col-font">{{#value.productName}}</span> 
+             <div class="chear_news">
+                   <!-- <i class="font-red">券后</i><sub class="font-red">￥</sub><em class="font-red">{{#value.productPrice}}</em> <del></del> -->
+                   {{#value.productPrice}}
+            </div> 
+
+               <div class="col_process"><span class="process"><a href="javascrip:;">75%</a></span> <span class="font-red">已领75117张</span></div> 
+                <!-- {{#value.productCoupon}}
+                {{#value.productCouponRemain}} -->
+              <div class="col_bottom"><span class="quan"><a href="javascript:;" class="font-red">{{#value.productCoupon}}</a></span>  <span class="xiadan"><a href="javescript:;">下单链接</a></span></div>  
+            </div>
+</div>
+    {{/each}}
+</script>
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) bootstrap是基于iQuery，所以先引入jq-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed 是bootstrap核心的js文件-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/art-template/template.js"></script>
+<script src="./js/iscroll.js"></script>
+<script src="./js/chearPage.js"></script>
+</body>
+</html>
