@@ -5,8 +5,12 @@ $.ajax({
     type:'get',
     url:'http://193.112.55.79:9090/api/getbaicaijiatitle',
     data:'json',
+    beforeSend:function(){
+        $('.bount-box').show();
+    },
     success:function (result) {
-        console.log(result);
+        // console.log(result);
+        $('.bount-box').empty();
         var html=template('tabTem',result)
         $('.nav-tabs').html(html);
         Tabitems();

@@ -66,7 +66,21 @@
     </div> 
 
     <!-- 回到顶部 -->
-    <a href="#miaolink" id="linktop"></a>
+    <a href="#miaolink" id="linktop"> <span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+
+    <!-- 实现小圆点 -->
+    <div class="bount-box ">
+        <div class="bouncing-loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+
+
 
 
 
@@ -84,10 +98,10 @@
     <div role="tabpanel" class="tab-pane active proitems" id="{{#value._id}}" titleId="{{#value.productId}}">
             <div class="col-xs-4 content_l" >{{#value.productImg}}</div>
             <div class="col-xs-8 content_r">
-            <span class="col-font">{{#value.productName}}</span> 
+            <div class="col-content">{{#value.productName}}</div> 
              <div class="chear_news">
-                   <!-- <i class="font-red">券后</i><sub class="font-red">￥</sub><em class="font-red">{{#value.productPrice}}</em> <del></del> -->
-                   {{#value.productPrice}}
+                   <em class="font-red">{{#value.productPrice}}</em>
+                   <!-- {{#value.productPrice}} -->
             </div> 
 
                <div class="col_process"><span class="process"><a href="javascrip:;">75%</a></span> <span class="font-red">已领75117张</span></div> 

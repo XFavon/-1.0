@@ -95,11 +95,8 @@ html {
                     width: 100%;
                     margin: 0;
                     //字体详细
-                    .col_font{
-                        .b{
-                            font-weight: bold;
-                            font-size: 18px;
-                        }
+                    .col-content{
+                        font-size: 18px;
                     }
                     .chear_news{
                         margin: 16px 0;
@@ -108,11 +105,14 @@ html {
                             color: #ff0000;
                         }
                         em{
-                            font-size:  18px;
+                            font-size:  22px;
                             color: #ff0000;
+                            padding-left: 4px;
                         }
                         del{
+                            font-size: 16px;
                             color: #666;
+                            padding: 0 4px;
                         }
                     }
                     //进度条
@@ -152,6 +152,7 @@ html {
                         }
                     }
                     .col_bottom{
+                        width: 100%;
                         margin: 5px 0;
                         .xiadan{
                             height: 30px;
@@ -219,8 +220,71 @@ html {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color:rgba(120, 120, 120.1);
+        background-color:#7878B0;
         position: fixed;
         bottom: 15px ; 
         right: 20px;
+        color: #787878;
+        >span{
+            position: absolute;
+            line-height: 50px;
+            text-align: center;
+            font-size:52px; 
+        }
  }
+
+ //实现小圆点
+ @keyframes bouncing-loader {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0.1;
+      transform: translateY(-1rem);
+    }
+  }
+  .bount-box{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+  }
+  .bouncing-loader {
+    display: flex;
+    justify-content: center;
+  }
+  .bouncing-loader > div {
+    width: 1rem;
+    height: 1rem;
+    margin: 3rem 0.2rem;
+    background: #8385aa;
+    border-radius: 50%;
+    animation: bouncing-loader 0.6s infinite alternate;
+  }
+  .bouncing-loader > div:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .bouncing-loader > div:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  
+//   @keyframes donut-spin {
+//     0% {
+//       transform: rotate(0deg);
+//     }
+//     100% {
+//       transform: rotate(360deg);
+//     }
+//   }
+//   .donut {
+//     display: inline-block;
+//     border: 4px solid rgba(0, 0, 0, 0.1);
+//     border-left-color: #7983ff;
+//     margin: 500px auto;
+//     border-radius: 50%;
+//     width: 30px;
+//     height: 30px;
+//     animation: donut-spin 1.2s linear infinite;
+//   }
+  

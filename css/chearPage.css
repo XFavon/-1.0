@@ -95,8 +95,7 @@ html {
   margin: 0;
 }
 
-.cPage .tab-content .proitems .content_r .col_font .b {
-  font-weight: bold;
+.cPage .tab-content .proitems .content_r .col-content {
   font-size: 18px;
 }
 
@@ -110,12 +109,15 @@ html {
 }
 
 .cPage .tab-content .proitems .content_r .chear_news em {
-  font-size: 18px;
+  font-size: 22px;
   color: #ff0000;
+  padding-left: 4px;
 }
 
 .cPage .tab-content .proitems .content_r .chear_news del {
+  font-size: 16px;
   color: #666;
+  padding: 0 4px;
 }
 
 .cPage .tab-content .proitems .content_r .col_process {
@@ -158,6 +160,7 @@ html {
 }
 
 .cPage .tab-content .proitems .content_r .col_bottom {
+  width: 100%;
   margin: 5px 0;
 }
 
@@ -221,9 +224,79 @@ html {
 #linktop {
   width: 50px;
   height: 50px;
-  background-color: black;
+  border-radius: 50%;
+  background-color: #7878B0;
   position: fixed;
   bottom: 15px;
   right: 20px;
+  color: #787878;
+}
+
+#linktop > span {
+  position: absolute;
+  line-height: 50px;
+  text-align: center;
+  font-size: 52px;
+}
+
+@-webkit-keyframes bouncing-loader {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0.1;
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+}
+
+@keyframes bouncing-loader {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0.1;
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+}
+
+.bount-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.bouncing-loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bouncing-loader > div {
+  width: 1rem;
+  height: 1rem;
+  margin: 3rem 0.2rem;
+  background: #8385aa;
+  border-radius: 50%;
+  -webkit-animation: bouncing-loader 0.6s infinite alternate;
+          animation: bouncing-loader 0.6s infinite alternate;
+}
+
+.bouncing-loader > div:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.bouncing-loader > div:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 /*# sourceMappingURL=chearPage.css.map */
