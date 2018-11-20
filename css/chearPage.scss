@@ -154,14 +154,15 @@ html {
                     .col_bottom{
                         width: 100%;
                         margin: 5px 0;
+                        display: flex;
+                        justify-content: space-between;
                         .xiadan{
-                            height: 30px;
+                            height: 28px;
                             width: 86px;
                             display: inline-block;
                             background-color: #ff5e5d;
-                            margin-left: 60px;
                             >a{
-                                line-height: 30px;
+                                line-height: 29px;
                                 color: #fff;
                                 text-align: center;
                                 margin-top: 15px;
